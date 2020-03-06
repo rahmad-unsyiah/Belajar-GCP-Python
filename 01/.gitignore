@@ -1,0 +1,5 @@
+# Abaikan semua isi directory env
+env/
+
+# Kompilas pythion
+*.pyc
