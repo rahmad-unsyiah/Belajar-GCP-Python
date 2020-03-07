@@ -1,0 +1,8 @@
+# Jangan deploy virtual environment nya
+env/
+
+# Jangan deploy PyCache
+__pycache__/
+
+# Jangan deploy hasil kompilasi Python
+*.py[cod]

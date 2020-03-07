@@ -1,0 +1,11 @@
+# Abaikan semua isi directory env
+env/
+
+# Kompilasi python
+*.pyc
+
+# Semua directory PyCache
+__pycache__/
+
+# Hasil kompilasi Python
+*.py[cod]

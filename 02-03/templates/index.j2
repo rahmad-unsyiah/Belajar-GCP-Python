@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        {% if nama %}
+            Baru menambahkan {{ nama }} yang berumur {{ umur }}.<br/>
+        {% endif %}
+        <form action="/form" method="post">
+            <label for="txtNama">Nama lengkap</label>
+            <input type="text" name="txtNama" size="32"><br/>
+            <label for="txtUmur">Umur</label>
+            <input type="number" name="txtUmur" min="0" max="100"><br/>
+            <input type="submit" name="btnDaftar" value="Daftar"> 
+        </form><br/>
+        <a href="/daftar">Daftar anggota</a>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <table border="1">
+            <tr>
+                <th>Nama</th>
+                <th>Umur</th>
+                <th>Keterangan</th>
+            </tr>
+        {% for satu_nama in daftar_tampil %}
+            <tr>
+                <td>{{ satu_nama["nama"] }}</td>
+                <td>{{ satu_nama["umur"] }}</td>
+                <td>
+            {% if satu_nama["umur"] < 13 %}
+                    Anak-anak
+            {% elif satu_nama["umur"] <20 %}        
+                    Remaja
+            {% else %}
+                    Dewasa
+            {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+        </table>    
+    </body>
+</html>

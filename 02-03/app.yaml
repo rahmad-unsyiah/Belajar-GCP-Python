@@ -1,0 +1,25 @@
+# Versi Python
+runtime: python37
+
+# Perangkat yang kita akan pakai, yaitu: F2
+instance_class: F2
+
+# Nama servis, ini yang pertama jadi harus default
+service: default
+
+handlers:
+  # Directory untuk CSS
+- url: /css
+  static_dir: css
+
+  # Directory untuk Javascript
+- url: /js
+  static_dir: js
+
+  # Directory untuk gambar
+- url: /img
+  static_dir: image
+
+  # Penanganan URL selain untuk berkas-berkas statis.
+- url: /.*
+  script: auto
