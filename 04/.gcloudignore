@@ -22,3 +22,6 @@ __pycache__/
 
 # Jangan deploy virtual environment nya
 env/
+
+# Jangan deploy Datastore local
+data_dir/
