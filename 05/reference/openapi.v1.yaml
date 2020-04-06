@@ -1,0 +1,74 @@
+swagger: '2.0'
+info:
+  title: Belajar GCP Endpoints
+  version: 0.0.1
+  description: Contoh OpenAPI memakai StopLight.
+schemes:
+  - https
+produces:
+  - application/json
+consumes:
+  - application/json
+paths:
+  /api/daftar:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/daftar_peserta'
+        '400':
+          description: Bad Request
+          schema:
+            type: object
+            properties: {}
+      operationId: get-api-daftar
+      parameters: []
+      description: Mengembalikan daftar peserta.
+  /api/form:
+    post:
+      summary: ''
+      operationId: post-api-form
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: string
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/peserta'
+          description: Informasi peserta  baru.
+      description: Menambah peserta baru.
+definitions:
+  peserta:
+    title: peserta
+    type: object
+    properties:
+      key:
+        type: integer
+      nama:
+        type: string
+      umur:
+        type: integer
+    description: Data satu orang peserta.
+  daftar_peserta:
+    title: daftar_peserta
+    type: object
+    properties:
+      daftar:
+        type: array
+        items:
+          $ref: '#/definitions/peserta'
+    description: Daftar peserta. Dibungkus dalam object karena Endpoints tidak menerima array untuk level paling atas.
+host: study-gcp-endpoints-python-2.appspot.com
+securityDefinitions:
+  api_key:
+    name: key
+    type: apiKey
+    in: query
+security:
+  - api_key: []

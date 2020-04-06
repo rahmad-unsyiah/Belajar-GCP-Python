@@ -1,0 +1,11 @@
+# Abaikan semua isi directory env
+env/
+
+# Semua directory PyCache
+__pycache__/
+
+# Hasil kompilasi Python
+*.py[cod]
+
+# Datastore local
+data_dir/
